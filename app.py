@@ -45,6 +45,7 @@ if file is not None:
 	nx.draw(H,pos, with_labels=True, width=edge_width)
 	plt.savefig("exported.png")
 
+
 if st.button("分析開始"):
     st.image("exported.png")
 
