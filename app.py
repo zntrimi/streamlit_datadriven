@@ -39,7 +39,7 @@ if file is not None:
         H.add_weighted_edges_from([(row[0], row[1], float(row[2]))])
 
     # weightによって線の太さを変える
-    edge_width = [d["weight"] * 5 for (u, v, d) in H.edges(data=True)]
+    edge_width = [d["weight"] * lineweight for (u, v, d) in H.edges(data=True)]
 
     # posを定義
     pos = nx.spring_layout(H, k=keisu)  # k = node間反発係数
