@@ -15,11 +15,11 @@ file = st.file_uploader('Upload your csv file', type=['csv'])
 if file:
     st.markdown(f'{file.name} has been uploaded')
     dir_path = os.path.join(DIR_PATH, file.name)
-    # 画像を保存する
+    # ファイルを保存する
     with open(dir_path, 'wb') as f:
         f.write(file.read())
         
-    # 保存した画像を表示
+    # 保存したCSVを表示する
     img = pd.read_csv(dir_path)
     st.write(img)
 
