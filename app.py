@@ -9,6 +9,8 @@ st.title("デードリ分析")
 
 DIR_PATH = 'csvs'
 
+st.write("まず、ファイルをアップロードしてから分析開始ボタンを押してください。最後にファイルを画像としてダウンロードできます。")
+
 file = st.file_uploader('Upload your csv file', type=['csv'])
 if file:
     st.markdown(f'{file.name} has been uploaded')
